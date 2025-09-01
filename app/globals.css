@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Esquema de colores: Negro, Blanco, Dorado */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    /* Dorado como color primario */
+    --primary: 45 100% 51%;
+    --primary-foreground: 0 0% 0%;
+
+    /* Grises elegantes para secundario */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
+
+    /* Tonos suaves para muted */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    /* Dorado suave para accent */
+    --accent: 45 100% 96%;
+    --accent-foreground: 0 0% 9%;
+
+    /* Rojo elegante para destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Bordes suaves */
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 45 100% 51%;
+    --radius: 0.5rem;
+
+    /* Colores para gráficos - tonos dorados y elegantes */
+    --chart-1: 45 100% 51%;
+    --chart-2: 0 0% 20%;
+    --chart-3: 45 100% 35%;
+    --chart-4: 0 0% 60%;
+    --chart-5: 45 100% 65%;
+  }
+
+  .dark {
+    /* Modo oscuro: Negro dominante con acentos dorados */
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Dorado brillante para modo oscuro */
+    --primary: 45 100% 65%;
+    --primary-foreground: 0 0% 9%;
+
+    /* Grises oscuros para secundario */
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    /* Tonos oscuros para muted */
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    /* Dorado oscuro para accent */
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Rojo oscuro para destructive */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Bordes oscuros */
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 45 100% 65%;
+
+    /* Colores para gráficos en modo oscuro */
+    --chart-1: 45 100% 65%;
+    --chart-2: 0 0% 80%;
+    --chart-3: 45 100% 45%;
+    --chart-4: 0 0% 40%;
+    --chart-5: 45 100% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Estilos personalizados para el tema dorado */
+@layer components {
+  .gold-gradient {
+    background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
+  }
+
+  .gold-text {
+    @apply text-primary;
+  }
+
+  .gold-border {
+    @apply border-primary;
+  }
+
+  .elegant-shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .elegant-shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+}
